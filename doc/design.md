@@ -97,6 +97,12 @@ The KTA command, with $KTA_PATH=/path/to/kta, is:
 
 
 	
+### Compile assembly files
+KTA can run on assembly files compiled with `gcc` or other compiler (LLVM) for mips32:
+
+        >> ./bin/kta wcet $KTA_PATH/test/demo/fact.s -compile fact -args a0=[3,5]
+
+This allows to measure the number of cycles for code that is already compiled
  
 # Code structure
 
