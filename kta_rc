@@ -1,6 +1,10 @@
 #!/bin/bash
 
-RPATH=${PWD}/runtime #${BASH_SOURCE[0]}/runtime
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+MCB_PATH=/opt/mcb32tools # default location - needs update otherwise
+
+RPATH=${SCRIPT_DIR}/runtime #${BASH_SOURCE[0]}/runtime
 BPATH=${PWD}/bin #${BASH_SOURCE[0]}/runtime
 
 if [ -f ${MCB_PATH}/environment ]; then
